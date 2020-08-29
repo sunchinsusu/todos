@@ -1,0 +1,35 @@
+
+.switch-off{
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: white;
+    outline: none;
+    border-radius: 10px;
+    .marble{
+        margin: 1px auto 1px 1px;
+        width: 18px;
+        height: 18px;
+        background-color: rgb(119, 119, 119);
+        border-radius: 10px;
+        transition: all 300ms;
+    }
+}
+.switch-on{
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgb(61, 141, 61);
+    background-color: white;
+    outline: none;
+    border-radius: 10px;
+    .marble{
+        margin: 1px 1px 1px auto;
+        width: 18px;
+        height: 18px;
+        background-color: rgb(2, 114, 2);
+        border-radius: 10px;
+        transition: all 300ms;
+    }
+}

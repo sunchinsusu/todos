@@ -1,0 +1,115 @@
+.detail{
+    margin-top: 3%;
+    margin-right: 3%;
+    border-radius: 15px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 2px 2px 15px 2px rgb(216, 216, 216);
+    .head{
+        padding-left: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgb(197, 197, 197);
+        border-bottom: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .edit{
+            display: flex;
+            margin-right: 2%;
+            span{
+                margin-right: 3px;
+                font-weight: bold;
+            }
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1%;
+        .data{
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+            justify-content: space-between;
+            .form-group{
+                margin-top: 2%;
+                margin-bottom: 1%;
+                width: 100%;
+                display: flex ;
+                justify-content: space-between;
+                div{
+                    font-size: large;
+
+                }
+                
+                textarea{
+                    height: 15rem;
+                }
+            }
+            button{
+                cursor: pointer;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                border: 1px solid darkgray;
+                outline: none;
+                background-color: rgb(74, 160, 74);
+            }
+            button:hover{
+                background-color: rgb(43, 151, 43);
+            }
+        }
+        .right{
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            label{
+                text-align: center;
+                outline: none;
+                border-radius: 15px;
+                padding: 3px 5px 3px 5px;
+                height: max-content;
+                color: white;
+            }
+            button{
+                border-radius: 5px;
+                color: black;
+                border: none;
+                outline: none;
+                background-color: rgb(19, 180, 19);
+                margin-top: 10%;
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+            button:hover{
+                border: 1px solid black;
+                background-color: rgb(17, 168, 17);
+            }
+        }
+        
+        
+    }
+    .class-disable{
+        width: 80%;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        padding: 1%;
+        color: black;
+        font-weight: bold;
+    }
+    .class-enable{
+        outline: none;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 7px;
+        font-size: 14px;
+        padding: 1%;
+        font-weight: bold;
+    }
+}

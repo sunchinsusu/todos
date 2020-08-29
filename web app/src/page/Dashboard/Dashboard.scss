@@ -1,0 +1,138 @@
+.dashboard{
+    .stat{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        
+        .block{
+            margin: 1%;
+            width: 23%;
+            height: 10rem;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            box-shadow: 2px 2px 20px 2px rgb(219, 219, 219);
+            .title{
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                height: 12%;
+                border-bottom: 1px solid black;
+                color: white;
+                font-weight: bold;
+                font-size: large;
+                text-align: center;
+                padding-top: 3%;
+            }
+            .body{
+                color: white;
+                font-size: 60px;
+                font-weight: bold;
+                padding-top: 10%;
+                text-align: center;
+            }
+        }
+        .blue{
+            background-color: #007bfe;
+            .title{
+                background-color: rgb(0, 0, 146);
+            }
+        }
+        .blue:hover{
+            background-color: #0074f0;
+        }
+        .yellow{
+            background-color: #ffc106;
+            .title{
+                background-color: rgb(184, 119, 0);
+            }
+        }
+        .yellow:hover{
+            background-color: #f0b504;
+        }
+        .red{
+            background-color: #dc3545;
+            .title{
+                background-color: rgb(151, 0, 0);
+            }
+        }
+        .red:hover{
+            background-color: #c52434;
+        }
+        .green{
+            background-color: #27a745;
+            .title{
+                background-color: rgb(0, 65, 0);
+            }
+        }
+        .green:hover{
+            background-color: #199636;
+        }
+    }
+    .notify{
+        width: 98%;
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+        .time{
+            padding-left: 80%;
+            border-bottom: 1px solid black;
+        }
+        .content{
+            @-webkit-keyframes pendulum{
+                from{
+                    -webkit-transform:rotate(0deg);
+                    -moz-transform:rotate(0deg);
+                    -o-transform:rotate(0deg);
+                }
+                to{
+                    -webkit-transform:rotate(360deg);
+                    -moz-transform:rotate(360deg);
+                    -o-transform:rotate(360deg);
+                }
+            }
+            @keyframes pendulum {
+                from{
+                    -webkit-transform:rotate(-30deg);
+                    -moz-transform:rotate(-30deg);
+                    -o-transform:rotate(-30deg);
+                }
+                to{
+                    -webkit-transform:rotate(30deg);
+                    -moz-transform:rotate(30deg);
+                    -o-transform:rotate(30deg);
+                }
+            }
+            @keyframes rotate {
+                from{
+                    -webkit-transform:rotate(0deg);
+                    -moz-transform:rotate(0deg);
+                    -o-transform:rotate(0deg);
+                }
+                to{
+                    -webkit-transform:rotate(360deg);
+                    -moz-transform:rotate(360deg);
+                    -o-transform:rotate(360deg);
+                }
+            }
+            .rotate{
+                animation: rotate 800ms linear 0s infinite;
+                -webkit-animation: rotate 800ms linear 0s infinite;
+                -moz-animation: rotate 800ms linear 0s infinite;
+                -o-animation: rotate 800ms linear 0s infinite; 
+            }
+            .bell{
+                animation: pendulum 200ms linear 200ms infinite alternate;
+                -webkit-animation: pendulum 200ms linear 200ms infinite alternate;
+                -moz-animation: pendulum 200ms linear 200ms infinite alternate;
+                -o-animation: pendulum 200ms linear 200ms infinite alternate; 
+            }
+            .alert{
+                cursor: pointer;
+            }
+            .alert:hover{
+                color: #f0b504;
+                text-decoration: underline;
+            }
+        }
+    }
+}

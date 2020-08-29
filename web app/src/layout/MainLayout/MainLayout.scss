@@ -1,0 +1,61 @@
+.main-layout{
+    display: flex;
+    flex-direction: row;
+    .main{
+        transition: all 500ms;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .wrap-main-content{
+            .main-content{
+                .content-footer{
+                    padding-top: 4%;
+                    padding-left: 18%;
+                    display: flex;
+                    flex-direction: column;
+                    .content{
+                        height: 100%;
+                    }
+                }
+            }
+            
+        }
+    }
+    .sidebar{
+        padding: 1%;
+        position: fixed;
+        z-index: 101;
+        right: 0px;
+        top: 0;
+        width: 30%;
+        height: 100%;
+        transition: all 500ms;
+        background-color: rgb(241, 240, 240);
+        box-shadow: -8px 5px 23px 1px rgb(165, 165, 165);
+    }
+    .btn-add{
+        
+        position: fixed;
+        z-index: 102;
+        bottom: 3%;
+        right: 3%;
+        button{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            outline: none;
+            border: none;
+            border-radius: 25px;
+            background-color: rgb(219, 219, 219);
+            box-shadow: 5px 5px 20px 3px rgb(156, 156, 156);
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+        }
+        button:hover{
+            border: 1px solid rgb(177, 177, 177);
+            background-color: rgb(194, 194, 194);
+        }
+    }
+}

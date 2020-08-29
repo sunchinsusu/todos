@@ -1,0 +1,51 @@
+.header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: #333940;
+    padding: 0.5% 2% 0.5% 2%;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    span{
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        margin-left: 3%;
+    }
+    .search{
+        display: flex;
+        padding: 0;
+        input{
+            width: 17rem;
+            font-weight: 100;
+            font-size: 16px;
+            outline: none;
+            padding: 4px;
+            border: none;
+            background-color: rgb(247, 247, 247);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        button{
+            cursor: pointer;
+            background-color: rgb(226, 226, 226);
+            width: 3rem;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            outline: none;
+            border: none;
+        }
+        button:hover{
+            background-color: rgb(206, 206, 206);
+        }
+    }
+    .welcome{
+        margin-left: 40%;
+        color: white;
+        font-size: 16px;
+        font-weight: normal;
+        align-self: flex-end;
+    }
+}
