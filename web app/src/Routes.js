@@ -1,31 +1,30 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { RouteWithLayout } from './component';
-import { Login, Detail } from './page'
-import { MainLayout } from './layout'
+import { Sign } from './page'
+import { MainLayout, EmptyLayout } from './layout'
 
 
 
 const Routes = (props) => {
+  const requireAuthen=(component)=>{
+    const token = localStorage.token
+    if(token != null) return component
+    return Sign
+  }
+
   return (
     <Switch>
-      <RouteWithLayout
-        component={Login}
-        exact
-        layout={MainLayout}
-        path="/login"
-      />
       <Route
             path = "/"
-            component={MainLayout}
+            component={requireAuthen(MainLayout)}
             exact
         />
-      <RouteWithLayout
-        component={Detail}
-        exact
-        layout={MainLayout}
-        path="/detail/:id"
-      />
+        <Route
+            path = "/login"
+            component={Sign}
+            exact
+        />
     </Switch>
 
   );

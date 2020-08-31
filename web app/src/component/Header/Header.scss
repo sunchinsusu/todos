@@ -48,4 +48,16 @@
         font-weight: normal;
         align-self: flex-end;
     }
+    .logout{
+        cursor: pointer;
+        margin-left: 2%;
+        color: rgb(163, 163, 163);
+        font-size: 16px;
+        font-weight: normal;
+        align-self: flex-end;
+    }
+    .logout:hover{
+        text-decoration: underline;
+        color: white;
+    }
 }

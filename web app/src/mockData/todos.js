@@ -2,7 +2,7 @@ const todos = [
     {
         id : '1',
         title : 'Todo 1',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -10,7 +10,7 @@ const todos = [
     {
         id : '2',
         title : 'Todo 2',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 2
@@ -18,7 +18,7 @@ const todos = [
     {
         id : '3',
         title : 'Todo 3',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 3
@@ -26,7 +26,7 @@ const todos = [
     {
         id : '4',
         title : 'Todo 4',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 4
@@ -34,7 +34,7 @@ const todos = [
     {
         id : '5',
         title : 'Todo 5',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 3
@@ -42,7 +42,7 @@ const todos = [
     {
         id : '6',
         title : 'Todo 6',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 3
@@ -50,7 +50,7 @@ const todos = [
     {
         id : '7',
         title : 'Todo 7',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -58,7 +58,7 @@ const todos = [
     {
         id : '8',
         title : 'Todo 8',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 4
@@ -66,7 +66,7 @@ const todos = [
     {
         id : '9',
         title : 'Todo 9',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 2
@@ -74,7 +74,7 @@ const todos = [
     {
         id : '10',
         title : 'Todo 1',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 4
@@ -82,7 +82,7 @@ const todos = [
     {
         id : '11',
         title : 'Todo 2',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 2
@@ -90,7 +90,7 @@ const todos = [
     {
         id : '12',
         title : 'Todo 3',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 4
@@ -98,7 +98,7 @@ const todos = [
     {
         id : '13',
         title : 'Todo 4',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 3
@@ -106,7 +106,7 @@ const todos = [
     {
         id : '14',
         title : 'Todo 5',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -114,7 +114,7 @@ const todos = [
     {
         id : '15',
         title : 'Todo 6',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 2
@@ -122,7 +122,7 @@ const todos = [
     {
         id : '16',
         title : 'Todo 7',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 2
@@ -130,7 +130,7 @@ const todos = [
     {
         id : '17',
         title : 'Todo 8',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -138,7 +138,7 @@ const todos = [
     {
         id : '18',
         title : 'Todo 9',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 4
@@ -146,7 +146,7 @@ const todos = [
     {
         id : '19',
         title : 'Todo 1',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -154,7 +154,7 @@ const todos = [
     {
         id : '20',
         title : 'Todo 2',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -162,7 +162,7 @@ const todos = [
     {
         id : '21',
         title : 'Todo 3',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -170,7 +170,7 @@ const todos = [
     {
         id : '22',
         title : 'Todo 4',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -178,7 +178,7 @@ const todos = [
     {
         id : '23',
         title : 'Todo 5',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -186,7 +186,7 @@ const todos = [
     {
         id : '24',
         title : 'Todo 6',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -194,7 +194,7 @@ const todos = [
     {
         id : '25',
         title : 'Todo 7',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -202,7 +202,7 @@ const todos = [
     {
         id : '26',
         title : 'Todo 8',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1
@@ -210,7 +210,7 @@ const todos = [
     {
         id : '27',
         title : 'Todo 9',
-        data : '2020-01-08',
+        date : '2020-01-08',
         dueDate : '2020-30-08',
         des : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
         status : 1

@@ -6,6 +6,7 @@ import { Switch } from '../../component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight, faSave } from '@fortawesome/free-solid-svg-icons'
 import { renderIntoDocument } from 'react-dom/test-utils';
+import MyAxios from '../../util/MyAxios';
 
 const classDisable = "class-disable"
 const classEnable = "class-enable"
@@ -13,15 +14,11 @@ const display = 'block'
 const hidden = 'none'
 
 const Detail = (props) => {
-    const id = props.id;
-    const [todo, setTodo] = useState({})
+    const todoFromProps = props.todo;
+    const [todo, setTodo] = useState(todoFromProps)
     const [disabled, setDisabled] = useState(true)
     const [classInput, setClassInput] = useState(classDisable)
     const [displayUpdate, setDisplayUpdate] = useState(hidden)
-
-    useEffect(() => {
-        setTodo(todos.find((todo) => { return todo.id === id }))
-    }, {})
 
     const switchCallBack = (turning) => {
         setDisabled(!turning)
@@ -50,33 +47,52 @@ const Detail = (props) => {
         }
     }
 
-    const activeClick = () => {
-
-    }
-
-    const finishClick = () => {
-
+    const goToNextStep=()=>{
+        MyAxios('/api/todo/next-step/'+todo.id, 'PUT', null)
+            .then(res => {
+                setTodo(res.data)
+                alert("Change Step Successfully!")
+            })
+            .catch(err => {
+                window.location = "/login"
+            })
     }
 
     const renderButton = () => {
         if (todo.status === 1) {
-            return <button onClick={activeClick}>
+            return <button onClick={goToNextStep}>
                         <FontAwesomeIcon icon={faArrowCircleRight} style={{ paddingRight: '1%' }} />
                         Active
                     </button>
         }
         if (todo.status === 2) {
-            return <button onClick={finishClick}>
+            return <button onClick={goToNextStep}>
                         <FontAwesomeIcon icon={faArrowCircleRight} style={{ paddingRight: '1%' }} />
                         Finish
                     </button>
         }
     }
 
+    const change=(event)=>{
+        setTodo({...todo,[event.target.name]:event.target.value})
+    }
+
+    const btnUpdateClick=()=>{
+        MyAxios('/api/todo', 'PUT', todo)
+            .then(res => {
+                setTodo(todo)
+                alert("Update Successfully!")
+                window.location.href = window.location
+            })
+            .catch(err => {
+                window.location = "/login"
+            })
+    }
+
     return (
         <div className="detail">
             <div className="head">
-                <input type="text" defaultValue={todo.title} disabled={disabled} className={classInput} style={{fontSize:'large' ,backgroundColor:'rgb(197, 197, 197)'}}/>
+                <input name="title" type="text" onChange={change} defaultValue={todo.title} disabled={disabled} className={classInput} style={{fontSize:'large' ,backgroundColor:'rgb(197, 197, 197)'}}/>
                 <div className="edit">
                     <span>Edit</span>
                     <Switch callBack={switchCallBack} />
@@ -86,17 +102,17 @@ const Detail = (props) => {
                 <div className="data">
                     <div className="form-group">
                         <div>Date</div>
-                        <input type="date" defaultValue={new Date(todo.date)} disabled={disabled} className={classInput}></input>
+                        <input name="date" type="date" defaultValue={todo.date} disabled={disabled} className={classInput} onChange={change}></input>
                     </div>
                     <div className="form-group">
                         <div>Due Date</div>
-                        <input type="date" defaultValue={todo.dueDate} disabled={disabled} className={classInput}></input>
+                        <input name="dueDate" type="date" defaultValue={todo.dueDate} disabled={disabled} className={classInput} onChange={change}></input>
                     </div>
                     <div className="form-group">
                         <div>Description</div>
-                        <textarea type="textarea" defaultValue={todo.des} disabled={disabled} className={classInput}></textarea>
+                        <textarea name="des" defaultValue={todo.des} disabled={disabled} className={classInput} onChange={change}></textarea>
                     </div>
-                    <button style={{ display: displayUpdate }}>
+                    <button style={{ display: displayUpdate }} onClick={btnUpdateClick}>
                         <FontAwesomeIcon icon={faSave} style={{ paddingRight: '1%' }} />
                         Update
                     </button>

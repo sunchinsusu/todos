@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Card.scss'
+import MyAxios from '../../util/MyAxios';
 
 const doing = '#ffc106'
 const success = '#27a745'
@@ -28,32 +29,35 @@ const Card = (props) => {
     }, '')
 
 
-    const activeClick=()=>{
-
-    }
-
-    const finishClick=()=>{
-        
+    const goToNextStep=()=>{
+        MyAxios('/api/todo/next-step/'+props.todo.id, 'PUT', null)
+            .then(res => {
+                window.location = window.location.href
+                alert("Change Step Successfully!")
+            })
+            .catch(err => {
+                window.location = "/login"
+            })
     }
 
     const renderButton=()=>{
         if(props.todo.status === 1){
-            return <button onClick={activeClick}>Active</button>
+            return <button onClick={goToNextStep}>Active</button>
         }
         if(props.todo.status === 2){
-            return <button onClick={finishClick}>Finish</button>
+            return <button onClick={goToNextStep}>Finish</button>
         }
     }
 
-    const showDetailClick=(id)=>{
-        props.callBack(id)
+    const showDetailClick=(todo)=>{
+        props.callBack(todo)
     }
 
     return (
         <div className="card">
             <div className="card-content">
                 <span style={{ backgroundColor: color }}>{props.todo.dueDate}</span>
-                <h3 onClick={()=>showDetailClick(props.todo.id)}>{props.todo.title}</h3>
+                <h3 onClick={()=>showDetailClick(props.todo)}>{props.todo.title}</h3>
             </div>
             {
                 renderButton()

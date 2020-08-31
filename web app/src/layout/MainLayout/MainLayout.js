@@ -7,7 +7,7 @@ const MainLayout = (props) => {
     const [displayFormAdd, setDisplayFormAdd] = useState('none')
     const [tab,setTab]=useState(1);
     const [showDetail,setShowDetail] = useState(false)
-    const [idTodoDetail, setIdTodoDetail] = useState(-1)
+    const [todoDetail, setTodoDetail] = useState({})
 
     const btnAddClick = () => {
         if (displayFormAdd==='none') {
@@ -23,8 +23,8 @@ const MainLayout = (props) => {
         setTab(id);
     }
 
-    const showDetailCallBack=(id)=>{
-        setIdTodoDetail(id)
+    const showDetailCallBack=(todo)=>{
+        setTodoDetail(todo)
         setShowDetail(true)
     }
 
@@ -34,7 +34,7 @@ const MainLayout = (props) => {
 
     const renderTab=()=>{
         if(showDetail===true){
-            return <Detail id={idTodoDetail} />
+            return <Detail todo={todoDetail} />
         }
         switch(tab){
             case 1:

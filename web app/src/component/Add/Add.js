@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import './Add.scss'
+import MyAxios from '../../util/MyAxios';
 const Add = (props) => {
+
+
     const [todo,setTodo] = useState({
         title : '',
         date : '',
@@ -11,8 +14,18 @@ const Add = (props) => {
     })
 
     const change=(event)=>{
-        console.log(todo)
         setTodo({...todo,[event.target.name]:event.target.value})
+    }
+
+    const btnAddClick=()=>{
+        MyAxios('/api/todo', 'POST', todo)
+            .then(res => {
+                alert("Add todo successfully")
+                window.location = window.location.href
+            })
+            .catch(err => {
+                window.location = "/login"
+            })
     }
 
     return (
@@ -24,19 +37,19 @@ const Add = (props) => {
             </div>
             <div className="form-group">
                 <span>Date</span>
-                <input name="date" type="date" defaultValue={new Date(todo.date)} className="input" onChange={change}></input>
+                <input name="date" type="date" defaultValue={todo.date} className="input" onChange={change}></input>
             </div>
             <div className="form-group">
                 <span>Due Date</span>
-                <input name="dueDate" type="date" defaultValue={new Date(todo.dueDate)} className="input" onChange={change}></input>
+                <input name="dueDate" type="date" defaultValue={todo.dueDate} className="input" onChange={change}></input>
             </div>
             <div className="form-group">
                 <span>Description</span>
-                <textarea name="des" type="textarea" defaultValue={todo.des} className="input" onChange={change}></textarea>
+                <textarea name="des"  defaultValue={todo.des} className="input" onChange={change}></textarea>
             </div>
-            <button>
+            <button onClick={btnAddClick}>
                 <FontAwesomeIcon icon={faSave} style={{ paddingRight: '1%' }} />
-                Update
+                Create
             </button>
         </div>
     );
