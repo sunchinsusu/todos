@@ -16,5 +16,9 @@ Clone this repository
 - npm i
 - npm start
 
+# Live
+1. Backend api: https://suntodos.herokuapp.com
+2. Webapp: https://todos-55190.firebaseapp.com
+
 
 Contact me at: thuatnt280798@gmail.com
